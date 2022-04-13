@@ -37,10 +37,10 @@ Route::get('/iop',[BaseController::class,'iop'])->name('iop');
 
 
 // ------------------ Admin Panel Routes -------------------//
- Route::get('/admin',[AdminBaseController::class,'admin'])->name('admin');
- Route::get('/yonetici',[AdminBaseController::class,'admin'])->name('admin');
+// Route::get('/',[AdminBaseController::class,'admin'])->name('admin');
+ Route::get('/laravelAdmin',[AdminBaseController::class,'index'])->name('admin');
  // ------------------ Admin Category Routes -------------------//
- Route::get('/yonetici/category',[\App\Http\Controllers\AdminPanel\CategoryController::class,'index'])->name('admin_category');
- Route::get('/yonetici/category/create',[\App\Http\Controllers\AdminPanel\CategoryController::class,'create'])->name('admin_category_create');
- Route::post('/yonetici/category/store',[\App\Http\Controllers\AdminPanel\CategoryController::class,'store'])->name('admin_category_store');
+ Route::get('/laravelAdmin/category',[\App\Http\Controllers\AdminPanel\CategoryController::class,'index'])->name('admin_category');
+ Route::get('/laravelAdmin/category/create',[\App\Http\Controllers\AdminPanel\CategoryController::class,'create'])->name('admin_category_create');
+ Route::post('/laravelAdmin/category/store',[\App\Http\Controllers\AdminPanel\CategoryController::class,'store'])->name('admin_category_store');
 

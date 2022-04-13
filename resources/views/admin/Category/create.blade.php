@@ -31,7 +31,7 @@
                 <div class="card">
                     <h5 class="card-header">Category Input</h5>
                     <div class="card-body">
-                        <form role="form" action="/admin/category/store" method="post">
+                        <form role="form" action="/laravelAdmin/category/store" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="inputText3" class="col-form-label">Title</label>
@@ -48,10 +48,10 @@
                             <label for="customFile">Image</label>
                             <div class="custom-file mb-3">
                                 <input type="file" class="custom-file-input" name="image">
-                                <label class="custom-file-label" for="customFile">Image</label>
+                                <label class="custom-file-label" for="customFile">Choose an image</label>
                             </div>
                             <label>Status</label>
-                            <select class="form-control" id="input-select">
+                            <select class="form-control" name="status" id="input-select">
                                 <option>True</option>
                                 <option>False</option>
                             </select>
