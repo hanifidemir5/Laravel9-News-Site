@@ -3,6 +3,7 @@
  use App\Http\Controllers\BaseController;
  use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\AdminPanel\BaseController as AdminBaseController;
+ use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,11 @@ Route::get('/iop',[BaseController::class,'iop'])->name('iop');
 // Route::get('/',[AdminBaseController::class,'admin'])->name('admin');
  Route::get('/laravelAdmin',[AdminBaseController::class,'index'])->name('admin');
  // ------------------ Admin Category Routes -------------------//
- Route::get('/laravelAdmin/category',[\App\Http\Controllers\AdminPanel\CategoryController::class,'index'])->name('admin_category');
- Route::get('/laravelAdmin/category/create',[\App\Http\Controllers\AdminPanel\CategoryController::class,'create'])->name('admin_category_create');
- Route::post('/laravelAdmin/category/store',[\App\Http\Controllers\AdminPanel\CategoryController::class,'store'])->name('admin_category_store');
+ Route::get('/laravelAdmin/category',[AdminCategoryController::class,'index'])->name('admin_category');
+ Route::get('/laravelAdmin/category/create',[AdminCategoryController::class,'create'])->name('admin_category_create');
+ Route::post('/laravelAdmin/category/store',[AdminCategoryController::class,'store'])->name('admin_category_store');
+ Route::get('/laravelAdmin/category/edit/{id}',[AdminCategoryController::class,'edit'])->name('admin_category_edit');
+ Route::get('/laravelAdmin/category/destroy/{id}',[AdminCategoryController::class,'delete'])->name('admin_category_destroy');
+ Route::get('/laravelAdmin/category/show/{id}',[AdminCategoryController::class,'show'])->name('admin_category_show');
+ Route::post('/laravelAdmin/category/update/{id}',[AdminCategoryController::class,'update'])->name('admin_category_update');
 
