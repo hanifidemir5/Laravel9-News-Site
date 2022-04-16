@@ -1,6 +1,6 @@
 @extends('layouts.AdminBase')
 
-@section('title', 'Admin Category Panel')
+@section('title', 'Admin News Panel')
 
 @section('content')
     <!-- ============================================================== -->
@@ -16,7 +16,7 @@
                     <div class="row mb-2">
                         <div class="col-sm-6">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Category List </h2>
+                                <h2 class="pageheader-title">News List </h2>
                             </div>
                             <div>
                                 <ol class="breadcrumb float-sm-right">
@@ -36,7 +36,7 @@
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="card">
                                 <div class="card-header" style="background-color:black">
-                                    <h3 class="card-title" style="color:white">Category Elements</h3>
+                                    <h3 class="card-title" style="color:white">News Elements</h3>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -45,8 +45,9 @@
                                             <tr class="border-0">
                                                 <th class="border-0">Id</th>
                                                 <th class="border-0">Image</th>
-                                                <th class="border-0">Parent</th>
+                                                <th class="border-0">Category</th>
                                                 <th class="border-0">Tıtle</th>
+                                                <th class="border-0">Type</th>
                                                 <th class="border-0">Status</th>
                                                 <th class="border-0" style="width: 40px">Edit</th>
                                                 <th class="border-0" style="width: 40px">Delete</th>
@@ -64,16 +65,17 @@
                                                     </td>
                                                     <td> {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}} </td>
                                                     <td>{{$rs->title}}</td>
+                                                    <td>{{$rs->type}}</td>
                                                     <td>{{$rs->status}}</td>
-                                                    <td><a href="{{route('laravelAdmin.category.edit',['id'=>$rs->id])}}" class="btn btn-success" >Edit</a></td>
-                                                    <td><a href="{{route('laravelAdmin.category.destroy',['id'=>$rs->id])}}" class="btn btn-danger"
+                                                    <td><a href="{{route('laravelAdmin.news.edit',['id'=>$rs->id])}}" class="btn btn-success" >Edit</a></td>
+                                                    <td><a href="{{route('laravelAdmin.news.destroy',['id'=>$rs->id])}}" class="btn btn-danger"
                                                            onclick="return confirm('Deleting !! Are you sure?')">Delete</a></td>
-                                                    <td><a href="{{route('laravelAdmin.category.show',['id'=>$rs->id])}}" class="btn btn-info">Show</a></td>
+                                                    <td><a href="{{route('laravelAdmin.news.show',['id'=>$rs->id])}}" class="btn btn-info">Show</a></td>
                                                 </tr>
                                             @endforeach
                                                 <tr>
                                                     <td colspan="9">
-                                                        <a href="{{route('laravelAdmin.category.create')}}" class="btn btn-dark float-right">Add Category</a>
+                                                        <a href="{{route('laravelAdmin.news.create')}}" class="btn btn-dark float-right">Add News</a>
                                                     </td>
                                                 </tr>
                                             </tbody>

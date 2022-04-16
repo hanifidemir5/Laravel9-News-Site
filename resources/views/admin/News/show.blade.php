@@ -1,6 +1,6 @@
 @extends('layouts.AdminBase')
 
-@section('title', 'Show Category: '.$data->title)
+@section('title', 'Show News: '.$data->title)
 
 @section('content')
     <!-- ============================================================== -->
@@ -36,12 +36,17 @@
                                     <th scope="col">{{$data->id}}</th>
                                 </tr>
                                 <tr>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">{{$data->category_id}}</th>
+                                </tr>
+                                <tr>
                                     <th scope="col">Image</th>
                                     <th scope="col">
                                         @if($data->image)
-                                            <img src="{{Storage::url($data->image)}}" style=" height: 100px">
+                                            <img src="{{Storage::url($data->image)}}" style=" height: 200px">
                                         @endif
                                     </th>
+
                                 </tr>
                                 <tr>
                                     <th scope="col">Title</th>
@@ -56,7 +61,7 @@
                                     <th scope="col">{{$data->description}}</th>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Details</th>
+                                    <th scope="col">Detail İnformation</th>
                                     <th scope="col">{{$data->detail}}</th>
                                 </tr>
                                 <tr>

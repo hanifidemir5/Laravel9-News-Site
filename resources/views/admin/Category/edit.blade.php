@@ -18,7 +18,7 @@
                             <h2 class="pageheader-title">Edit Category: {{$data->title}}</h2>
                             <div>
                                 <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item"><a href="/laravelAdmin">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
                                     <li class="breadcrumb-item active">Edit Page</li>
                                 </ol>
                             </div>
@@ -34,8 +34,20 @@
                     <h3 class="card-title" style="color:#fff">Category Elements</h3>
                     </div>
                     <div class="card-body">
-                        <form role="form" action="/laravelAdmin/category/update/{{$data->id}}" method="post">
+                        <form role="form" action="{{route('laravelAdmin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                             @csrf
+                            <div class="form-group">
+                                <label>Parent Category</label>
+
+                                <select class="form-control select2" name="parent_id" style="">
+                                    <option value="0" selected="selected">Main Category</option>
+                                    @foreach($datalist as $rs)
+                                        <option value="{{$rs->id}}" @if ($rs->id == $data->parent_id) selected="selected" @endif>
+                                            {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="inputText3" class="col-form-label">Title</label>
                                 <input type="text" class="form-control" name="title" value="{{$data->title}}">

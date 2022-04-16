@@ -26,7 +26,7 @@
                 <!-- ============================================================== -->
                     <div>
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/laravelAdmin">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
                             <li class="breadcrumb-item active">Blank Page</li>
                         </ol>
                     </div>

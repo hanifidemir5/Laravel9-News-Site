@@ -13,7 +13,10 @@
                                     <a class="nav-link" href="/laravelAdmin/user"><i class="m-r-10 mdi mdi-account-switch "></i>Users</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/laravelAdmin/category"><i class="m-r-10 mdi mdi-collage"></i>Categories</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.news.index')}}"><i class="fas fa-newspaper"></i>News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('laravelAdmin.category.index')}}"><i class="m-r-10 mdi mdi-collage"></i>Categories</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/laravelAdmin/message"><i class="m-r-10 mdi mdi-checkbox-multiple-blank"></i>Messages</a>
