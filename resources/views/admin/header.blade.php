@@ -26,7 +26,7 @@
                                     <div class="list-group">
                                         <a href="#" class="list-group-item list-group-item-action active">
                                             <div class="notification-info">
-                                                <div class="notification-list-user-img"><img src="admin/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                <div class="notification-list-user-img"><img src="{{asset('admin')}}/assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                 <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                     <div class="notification-date">2 min ago</div>
                                                 </div>
@@ -34,7 +34,7 @@
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action">
                                             <div class="notification-info">
-                                                <div class="notification-list-user-img"><img src="admin/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                <div class="notification-list-user-img"><img src="{{asset('admin')}}/assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                 <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
                                                     <div class="notification-date">2 days ago</div>
                                                 </div>
@@ -42,7 +42,7 @@
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action">
                                             <div class="notification-info">
-                                                <div class="notification-list-user-img"><img src="admin/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                <div class="notification-list-user-img"><img src="{{asset('admin')}}/assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                 <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                     <div class="notification-date">2 min ago</div>
                                                 </div>
@@ -50,7 +50,7 @@
                                         </a>
                                         <a href="#" class="list-group-item list-group-item-action">
                                             <div class="notification-info">
-                                                <div class="notification-list-user-img"><img src="admin/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                <div class="notification-list-user-img"><img src="{{asset('admin')}}/assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                 <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
                                                     <div class="notification-date">2 min ago</div>
                                                 </div>
@@ -70,24 +70,24 @@
                             <li class="connection-list">
                                 <div class="row">
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                        <a href="#" class="connection-item"><img src="admin/images/github.png" alt="" > <span>Github</span></a>
+                                        <a href="#" class="connection-item"><img src="{{asset('admin')}}/assets/images/github.png" alt="" > <span>Github</span></a>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                        <a href="#" class="connection-item"><img src="admin/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                        <a href="#" class="connection-item"><img src="{{asset('admin')}}/assets/images/dribbble.png" alt="" > <span>Dribbble</span></a>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                        <a href="#" class="connection-item"><img src="admin/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                        <a href="#" class="connection-item"><img src="{{asset('admin')}}/assets/images/dropbox.png" alt="" > <span>Dropbox</span></a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                        <a href="#" class="connection-item"><img src="admin/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                        <a href="#" class="connection-item"><img src="{{asset('admin')}}/assets/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                        <a href="#" class="connection-item"><img src="admin/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                        <a href="#" class="connection-item"><img src="{{asset('admin')}}/assets/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                        <a href="#" class="connection-item"><img src="admin/images/slack.png" alt="" > <span>Slack</span></a>
+                                        <a href="#" class="connection-item"><img src="{{asset('admin')}}/assets/images/slack.png" alt="" > <span>Slack</span></a>
                                     </div>
                                 </div>
                             </li>
@@ -97,7 +97,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown nav-user">
-                        <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="admin/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                        <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('admin')}}/assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                         <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                             <div class="nav-user-info">
                                 <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>

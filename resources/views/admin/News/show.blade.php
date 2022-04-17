@@ -32,53 +32,55 @@
                     <div class="card-body">
                             <table class="table table-hover">
                                 <tr>
-                                    <th scope="col">id</th>
-                                    <th scope="col">{{$data->id}}</th>
+                                    <th >id</th>
+                                    <td >{{$data->id}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Category</th>
-                                    <th scope="col">{{$data->category_id}}</th>
+                                    <th >Category</th>
+                                    <td >
+                                        {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($data->category,$data->category->title)}}
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Image</th>
-                                    <th scope="col">
+                                    <th >Image</th>
+                                    <td >
                                         @if($data->image)
                                             <img src="{{Storage::url($data->image)}}" style=" height: 200px">
                                         @endif
-                                    </th>
+                                    </td>
 
                                 </tr>
                                 <tr>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">{{$data->title}}</th>
+                                    <th >Title</th>
+                                    <td >{{$data->title}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Keywords</th>
-                                    <th scope="col">{{$data->keywords}}</th>
+                                    <th >Keywords</th>
+                                    <td >{{$data->keywords}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Description</th>
-                                    <th scope="col">{{$data->description}}</th>
+                                    <th >Description</th>
+                                    <td >{{$data->description}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Detail İnformation</th>
-                                    <th scope="col">{{$data->detail}}</th>
+                                    <th >Detail İnformation</th>
+                                    <td >{{$data->detail}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Type</th>
-                                    <th scope="col">{{$data->type}}</th>
+                                    <th >Type</th>
+                                    <td >{{$data->type}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">{{$data->status }}</th>
+                                    <th >Status</th>
+                                    <td >{{$data->status }}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Created Date</th>
-                                    <th scope="col">{{$data->created_at}}</th>
+                                    <th >Created Date</th>
+                                    <td >{{$data->created_at}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">Update Date</th>
-                                    <th scope="col">{{$data->updated_at }}</th>
+                                    <th >Update Date</th>
+                                    <td >{{$data->updated_at }}</td>
                                 </tr>
                             </table>
                         <div>

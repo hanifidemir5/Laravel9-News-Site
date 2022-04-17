@@ -5,7 +5,7 @@
  use App\Http\Controllers\AdminPanel\BaseController as AdminBaseController;
  use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
  use App\Http\Controllers\AdminPanel\NewsController as NewsController;
-
+ use App\Http\Controllers\AdminPanel\ImageController as ImageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,5 +61,11 @@ Route::get('/iop',[BaseController::class,'iop'])->name('iop');
              Route::get('/destroy/{id}', 'destroy')->name('destroy');
              Route::get('/show/{id}', 'show')->name('show');
              Route::post('/update/{id}', 'update')->name('update');
+         });
+     // ------------------ Admin News Image Gallery Routes -------------------//
+         Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
+             Route::get('/{pid}', 'index')->name('index');
+             Route::post('/store/{pid}', 'store')->name('store');
+             Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
          });
  });

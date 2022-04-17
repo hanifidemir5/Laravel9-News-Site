@@ -45,6 +45,7 @@
                                             <tr class="border-0">
                                                 <th class="border-0">Id</th>
                                                 <th class="border-0">Image</th>
+                                                <th class="border-0">Image Gallery</th>
                                                 <th class="border-0">Category</th>
                                                 <th class="border-0">Tıtle</th>
                                                 <th class="border-0">Type</th>
@@ -63,7 +64,13 @@
                                                         <img src="{{Storage::url($rs->image)}}" style=" height: 40px">
                                                         @endif
                                                     </td>
-                                                    <td> {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}} </td>
+                                                    <td>
+                                                        <a href="{{route('laravelAdmin.image.index',['pid'=>$rs->id])}}"
+                                                        onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
+                                                        <img src="{{asset('admin')}}/assets/images/Galleryicon.png" alt="" style="height: 40px">
+                                                        </a>
+                                                    </td>
+                                                    <td> {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}} </td>
                                                     <td>{{$rs->title}}</td>
                                                     <td>{{$rs->type}}</td>
                                                     <td>{{$rs->status}}</td>
@@ -74,7 +81,7 @@
                                                 </tr>
                                             @endforeach
                                                 <tr>
-                                                    <td colspan="9">
+                                                    <td colspan="10">
                                                         <a href="{{route('laravelAdmin.news.create')}}" class="btn btn-dark float-right">Add News</a>
                                                     </td>
                                                 </tr>
@@ -87,8 +94,7 @@
                         <!-- ============================================================== -->
                         <!-- end recent orders  -->
 
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
 @endsection
