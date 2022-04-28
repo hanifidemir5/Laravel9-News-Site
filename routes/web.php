@@ -17,10 +17,10 @@
 |
 */
 Route::get('/animegirl',function(){
-    return 'gandırıldın';
+    return '<h1>ara ara</h1>';
 });
 Route::get('/welcome', function () {
-    return view('welcome');
+    return view('welcome1');
 });
 
  Route::get('/',[BaseController::class,'test'])->name('test');

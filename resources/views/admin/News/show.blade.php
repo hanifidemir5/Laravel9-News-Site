@@ -64,7 +64,7 @@
                                 </tr>
                                 <tr>
                                     <th >Detail İnformation</th>
-                                    <td >{{$data->detail}}</td>
+                                    <td >{!! $data->detail !!}</td>
                                 </tr>
                                 <tr>
                                     <th >Type</th>
