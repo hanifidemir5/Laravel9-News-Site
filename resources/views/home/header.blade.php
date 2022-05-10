@@ -24,7 +24,7 @@
             <div class="col-lg-3 col-md-4">
                 <div class="b-logo">
                     <a href="index.html">
-                        <img src="{{'assets'}}/img/logo.png" alt="Logo">
+                        <img src="{{asset('assets')}}/img/logo.png" alt="Logo">
                     </a>
                 </div>
             </div>

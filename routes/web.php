@@ -31,6 +31,9 @@ Route::get('/Parameter/{id}/{Number}',[BaseController::class,'param'])->name('pa
 
 Route::post('/save',[BaseController::class,'save'])->name('save');
 
+ Route::get('/news/{id}',[BaseController::class,'newspage'])->name('newspage');
+
+
 Route::get('/iop',[BaseController::class,'iop'])->name('iop');
 
  Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
