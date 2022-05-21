@@ -33,8 +33,10 @@ Route::post('/save',[BaseController::class,'save'])->name('save');
 
  Route::get('/news/{id}',[BaseController::class,'newspage'])->name('newspage');
 
+ Route::get('/categorynews/{id}/{slug}',[BaseController::class,'categorynews'])->name('categorynews');
 
-Route::get('/iop',[BaseController::class,'iop'])->name('iop');
+
+ Route::get('/iop',[BaseController::class,'iop'])->name('iop');
 
  Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
      return view('dashboard');
