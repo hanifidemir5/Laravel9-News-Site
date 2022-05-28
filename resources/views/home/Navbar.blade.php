@@ -34,7 +34,6 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="single-page.html" class="nav-item nav-link">Single Page</a>
                     <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                     <a href="{{route('about')}}" class="nav-item nav-link">About</a>
                     <a href="{{route('references')}}" class="nav-item nav-link">References</a>
