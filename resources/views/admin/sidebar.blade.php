@@ -1,3 +1,4 @@
+
             <!-- ============================================================== -->
             <!-- left sidebar -->
             <!-- ============================================================== -->
@@ -19,7 +20,7 @@
                                     <a class="nav-link" href="{{route('laravelAdmin.category.index')}}"><i class="m-r-10 mdi mdi-collage"></i>Categories</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/laravelAdmin/message"><i class="m-r-10 mdi mdi-checkbox-multiple-blank"></i>Messages</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.message.index')}}"><i class="m-r-10 mdi mdi-checkbox-multiple-blank"></i>Messages</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/laravelAdmin/comment"><i class="m-r-10 mdi mdi-comment-processing"></i>Comments</a>
@@ -28,7 +29,7 @@
                                     <a class="nav-link" href="/laravelAdmin/profile"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/laravelAdmin/setting"><i class="m-r-10 mdi mdi-settings"></i>Settings</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.asetting')}}"><i class="m-r-10 mdi mdi-settings"></i>Settings</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/laravelAdmin/faq"><i class="fas fa-question-circle"></i>FAQ</a>

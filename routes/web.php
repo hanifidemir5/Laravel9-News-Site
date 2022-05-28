@@ -1,5 +1,6 @@
  <?php
 
+ use App\Http\Controllers\AdminPanel\MessageController;
  use App\Http\Controllers\BaseController;
  use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\AdminPanel\BaseController as AdminBaseController;
@@ -22,14 +23,19 @@ Route::get('/animegirl',function(){
 Route::get('/welcome', function () {
     return view('welcome1');
 });
+ // ------------------Home Page Routes -------------------//
 
  Route::get('/',[BaseController::class,'test'])->name('test');
+ Route::get('/about',[BaseController::class,'about'])->name('about');
+ Route::get('/references',[BaseController::class,'references'])->name('references');
+ Route::get('/contact',[BaseController::class,'contact'])->name('contact');
+ Route::post('/storemessage',[BaseController::class,'storemessage'])->name('storemessage');
 
  Route::get('/index',[BaseController::class,'index'])->name('test');
 
-Route::get('/Parameter/{id}/{Number}',[BaseController::class,'param'])->name('parameter');
+ Route::get('/Parameter/{id}/{Number}',[BaseController::class,'param'])->name('parameter');
 
-Route::post('/save',[BaseController::class,'save'])->name('save');
+ Route::post('/save',[BaseController::class,'save'])->name('save');
 
  Route::get('/news/{id}',[BaseController::class,'newspage'])->name('newspage');
 
@@ -44,10 +50,13 @@ Route::post('/save',[BaseController::class,'save'])->name('save');
 
 
 // ------------------ Admin Panel Routes -------------------//
-// Route::get('/',[AdminBaseController::class,'admin'])->name('admin');
  Route::prefix('laravelAdmin')->name('laravelAdmin.')->group(function(){
     Route::get('/',[AdminBaseController::class,'index'])->name('index');
- // ------------------ Admin Category Routes -------------------//
+     // ------------------ Admin General Routes -------------------//
+     Route::get('/asetting',[AdminBaseController::class,'asetting'])->name('asetting');
+     Route::post('/asetting/update',[AdminBaseController::class,'settingUpdate'])->name('asetting.update');
+
+     // ------------------ Admin Category Routes -------------------//
          Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function() {
              Route::get('/', 'index')->name('index');
              Route::get('/create', 'create')->name('create');
@@ -72,5 +81,13 @@ Route::post('/save',[BaseController::class,'save'])->name('save');
              Route::get('/{pid}', 'index')->name('index');
              Route::post('/store/{pid}', 'store')->name('store');
              Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
+         });
+     // ------------------ Admin Messages Routes -------------------//
+
+         Route::prefix('/message')->name('message.')->controller(MessageController::class)->group(function() {
+             Route::get('/', 'index')->name('index');
+             Route::get('/show/{id}', 'show')->name('show');
+             Route::post('/update/{id}', 'update')->name('update');
+             Route::get('/destroy/{id}', 'destroy')->name('destroy');
          });
  });

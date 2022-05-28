@@ -19,7 +19,7 @@
                                 <h2 class="pageheader-title">News List </h2>
                             </div>
                             <div>
-                                <ol class="breadcrumb float-sm-right">
+                                <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
                                     <li class="breadcrumb-item active">İndex Page</li>
                                 </ol>

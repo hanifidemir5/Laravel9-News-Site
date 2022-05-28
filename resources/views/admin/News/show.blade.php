@@ -50,34 +50,42 @@
                                     </td>
 
                                 </tr>
+
                                 <tr>
                                     <th >Title</th>
                                     <td >{{$data->title}}</td>
                                 </tr>
+
                                 <tr>
                                     <th >Keywords</th>
                                     <td >{{$data->keywords}}</td>
                                 </tr>
+
                                 <tr>
                                     <th >Description</th>
                                     <td >{{$data->description}}</td>
                                 </tr>
+
                                 <tr>
                                     <th >Detail İnformation</th>
                                     <td >{!! $data->detail !!}</td>
                                 </tr>
+
                                 <tr>
                                     <th >Type</th>
                                     <td >{{$data->type}}</td>
                                 </tr>
+
                                 <tr>
                                     <th >Status</th>
                                     <td >{{$data->status }}</td>
                                 </tr>
+
                                 <tr>
                                     <th >Created Date</th>
                                     <td >{{$data->created_at}}</td>
                                 </tr>
+
                                 <tr>
                                     <th >Update Date</th>
                                     <td >{{$data->updated_at }}</td>

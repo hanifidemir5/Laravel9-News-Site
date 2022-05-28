@@ -18,15 +18,13 @@
                             <div class="page-header">
                                 <h2 class="pageheader-title">Category List </h2>
                             </div>
-                            <div>
-                                <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                                    <li class="breadcrumb-item active">İndex Page</li>
-                                </ol>
-                            </div>
                         </div>
                     </div>
                 </section>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
+                    <li class="breadcrumb-item active">Index Page</li>
+                </ol>
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->

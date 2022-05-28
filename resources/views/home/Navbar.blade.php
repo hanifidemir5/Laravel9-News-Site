@@ -21,7 +21,7 @@
                             <ul class="category-list">
                                 @foreach($mainCategories as $rs)
                                     <li class="side-dropdown">
-                                        <a href="{{route('newspage',['id'=>$rs->id])}}" class="dropdown-item">{{$rs->title}}</a>
+                                        <a href="{{route('categorynews',['id'=>$rs->id,'slug'=>$rs->title])}}" class="dropdown-item">{{$rs->title}}</a>
                                         <div class="custom-menu">
                                             <div class="row">
                                                 @if(count($rs->children))
@@ -35,7 +35,9 @@
                         </div>
                     </div>
                     <a href="single-page.html" class="nav-item nav-link">Single Page</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                    <a href="{{route('about')}}" class="nav-item nav-link">About</a>
+                    <a href="{{route('references')}}" class="nav-item nav-link">References</a>
                 </div>
                 <div class="social ml-auto">
                     <a href=""><i class="fab fa-twitter"></i></a>
