@@ -1,5 +1,6 @@
  <?php
 
+ use App\Http\Controllers\AdminPanel\FaqController;
  use App\Http\Controllers\AdminPanel\MessageController;
  use App\Http\Controllers\BaseController;
  use Illuminate\Support\Facades\Route;
@@ -76,6 +77,17 @@ Route::get('/welcome', function () {
              Route::get('/show/{id}', 'show')->name('show');
              Route::post('/update/{id}', 'update')->name('update');
          });
+     // ------------------ Admin FAQ Routes -------------------//
+     Route::prefix('/faq')->name('faq.')->controller(FaqController::class)->group(function() {
+         Route::get('/', 'index')->name('index');
+         Route::get('/create', 'create')->name('create');
+         Route::post('/store', 'store')->name('store');
+         Route::get('/edit/{id}', 'edit')->name('edit');
+         Route::get('/destroy/{id}', 'destroy')->name('destroy');
+         Route::get('/show/{id}', 'show')->name('show');
+         Route::post('/update/{id}', 'update')->name('update');
+     });
+
      // ------------------ Admin News Image Gallery Routes -------------------//
          Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
              Route::get('/{pid}', 'index')->name('index');

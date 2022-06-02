@@ -32,7 +32,7 @@
                                     <a class="nav-link" href="{{route('laravelAdmin.asetting')}}"><i class="m-r-10 mdi mdi-settings"></i>Settings</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/laravelAdmin/faq"><i class="fas fa-question-circle"></i>FAQ</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.faq.index')}}"><i class="fas fa-question-circle"></i>FAQ</a>
                                 </li>
                             </ul>
                         </div>
