@@ -34,9 +34,10 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                     <a href="{{route('about')}}" class="nav-item nav-link">About</a>
                     <a href="{{route('references')}}" class="nav-item nav-link">References</a>
+                    <a href="{{route('faq')}}" class="nav-item nav-link">FAQ</a>
+                    <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="social ml-auto">
                     <a href=""><i class="fab fa-twitter"></i></a>

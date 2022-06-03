@@ -26,10 +26,17 @@
         </div>
     </div>
 
+
+
+
     <div class="contact">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-4">
+                    <div class="section-title">
+                        <h3>Contact Form</h3>
+                    </div>
+
                     <div class="contact-form">
                         @include('home.messages')
                         <form id="contact-form" action="{{route("storemessage")}}" method="post">

@@ -31,6 +31,7 @@ Route::get('/welcome', function () {
  Route::get('/references',[BaseController::class,'references'])->name('references');
  Route::get('/contact',[BaseController::class,'contact'])->name('contact');
  Route::post('/storemessage',[BaseController::class,'storemessage'])->name('storemessage');
+ Route::get('/faq',[BaseController::class,'faq'])->name('faq');
 
  Route::get('/index',[BaseController::class,'index'])->name('test');
 
