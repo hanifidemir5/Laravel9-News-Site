@@ -1,5 +1,5 @@
 <!-- Nav Bar Start -->
-<div class="nav-bar">
+<div class="nav-ba " style="background-color: transparent">
     <div class="container">
         @php
             $mainCategories = \App\Http\Controllers\BaseController::maincategorylist()
@@ -14,7 +14,7 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
-                    <a href="/" class="nav-item nav-link active">Home</a>
+                    <a href="/" class="nav-item nav-link">Home</a>
                     <div class="category-nav @if (!@isset($page)) show-on-click @endif">
                         <span href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Categories</span>
                         <div class="dropdown-menu">
@@ -40,11 +40,11 @@
                     <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                 </div>
                 <div class="social ml-auto">
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-youtube"></i></a>
+                    <a href=""><i class="fab fa-twitter" style="color: #ffffff"></i></a>
+                    <a href=""><i class="fab fa-facebook-f" style="color: #ffffff"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in" style="color: #ffffff"></i></a>
+                    <a href=""><i class="fab fa-instagram" style="color: #ffffff"></i></a>
+                    <a href=""><i class="fab fa-youtube" style="color: #ffffff"></i></a>
                 </div>
             </div>
         </div>

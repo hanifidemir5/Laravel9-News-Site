@@ -32,6 +32,7 @@ Route::get('/welcome', function () {
  Route::get('/contact',[BaseController::class,'contact'])->name('contact');
  Route::post('/storemessage',[BaseController::class,'storemessage'])->name('storemessage');
  Route::get('/faq',[BaseController::class,'faq'])->name('faq');
+ Route::post('/storecomment',[BaseController::class,'storecomment'])->name('storecomment');
 
  Route::get('/index',[BaseController::class,'index'])->name('test');
 
@@ -79,15 +80,15 @@ Route::get('/welcome', function () {
              Route::post('/update/{id}', 'update')->name('update');
          });
      // ------------------ Admin FAQ Routes -------------------//
-     Route::prefix('/faq')->name('faq.')->controller(FaqController::class)->group(function() {
-         Route::get('/', 'index')->name('index');
-         Route::get('/create', 'create')->name('create');
-         Route::post('/store', 'store')->name('store');
-         Route::get('/edit/{id}', 'edit')->name('edit');
-         Route::get('/destroy/{id}', 'destroy')->name('destroy');
-         Route::get('/show/{id}', 'show')->name('show');
-         Route::post('/update/{id}', 'update')->name('update');
-     });
+         Route::prefix('/faq')->name('faq.')->controller(FaqController::class)->group(function() {
+             Route::get('/', 'index')->name('index');
+             Route::get('/create', 'create')->name('create');
+             Route::post('/store', 'store')->name('store');
+             Route::get('/edit/{id}', 'edit')->name('edit');
+             Route::get('/destroy/{id}', 'destroy')->name('destroy');
+             Route::get('/show/{id}', 'show')->name('show');
+             Route::post('/update/{id}', 'update')->name('update');
+         });
 
      // ------------------ Admin News Image Gallery Routes -------------------//
          Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
