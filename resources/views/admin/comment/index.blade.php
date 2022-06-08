@@ -36,17 +36,19 @@
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="card">
                                 <div class="card-header" style="background-color:black">
-                                    <h3 class="card-title" style="color:white">message Elements</h3>
+                                    <h3 class="card-title" style="color:white">Comment Elements</h3>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered first">
                                             <thead class="bg-light">
                                             <tr class="border-0">
+                                                <th class="border-0">Id</th>
                                                 <th class="border-0">Name</th>
-                                                <th class="border-0">Phone</th>
-                                                <th class="border-0">Email</th>
                                                 <th class="border-0">Subject</th>
+                                                <th class="border-0">Review</th>
+                                                <th class="border-0">Rate</th>
+                                                <th class="border-0">Status</th>
                                                 <th class="border-0" style="width: 40px">Delete</th>
                                                 <th class="border-0" style="width: 40px">Show</th>
                                             </tr>
@@ -55,21 +57,21 @@
                                             @foreach($data as $rs)
                                                 <tr>
                                                     <td>{{$rs->id}}</td>
-                                                    <td>{{$rs->name}}</td>
-                                                    <td>{{$rs->phone}}</td>
-                                                    <td>{{$rs->email}}</td>
+                                                    <td>{{$rs->user-> name}}</td>
                                                     <td>{{$rs->subject}}</td>
+                                                    <td>{{$rs->review}}</td>
+                                                    <td>{{$rs->rate}}</td>
                                                     <td>{{$rs->status}}</td>
                                                     <td>
-                                                        <a href="{{route('laravelAdmin.message.show',['id'=>$rs->id])}}" class="btn btn-info"
-                                                            onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
-                                                            Show
+                                                        <a href="{{route('laravelAdmin.comment.destroy',['id'=>$rs->id])}}" class="btn btn-danger"
+                                                           onclick="return confirm('Deleting !! Are you sure?')">
+                                                            Delete
                                                         </a>
                                                     </td>
                                                     <td>
-                                                        <a href="{{route('laravelAdmin.message.destroy',['id'=>$rs->id])}}" class="btn btn-danger"
-                                                            onclick="return confirm('Deleting !! Are you sure?')">
-                                                            Delete
+                                                        <a href="{{route('laravelAdmin.comment.show',['id'=>$rs->id])}}" class="btn btn-info"
+                                                            onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
+                                                            Show
                                                         </a>
                                                     </td>
                                                 </tr>

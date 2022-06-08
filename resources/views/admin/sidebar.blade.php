@@ -23,7 +23,7 @@
                                     <a class="nav-link" href="{{route('laravelAdmin.message.index')}}"><i class="m-r-10 mdi mdi-checkbox-multiple-blank"></i>Messages</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/laravelAdmin/comment"><i class="m-r-10 mdi mdi-comment-processing"></i>Comments</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.comment.index')}}"><i class="m-r-10 mdi mdi-comment-processing"></i>Comments</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/laravelAdmin/profile"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
