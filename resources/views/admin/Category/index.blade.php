@@ -23,7 +23,7 @@
                 </section>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Index Page</li>
+                    <li class="breadcrumb-item active">Category Home Page</li>
                 </ol>
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->

@@ -21,7 +21,7 @@
                             <div>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                                    <li class="breadcrumb-item active">İndex Page</li>
+                                    <li class="breadcrumb-item active">Comments</li>
                                 </ol>
                             </div>
                         </div>
@@ -45,10 +45,12 @@
                                             <tr class="border-0">
                                                 <th class="border-0">Id</th>
                                                 <th class="border-0">Name</th>
+                                                <th class="border-0">News</th>
                                                 <th class="border-0">Subject</th>
                                                 <th class="border-0">Review</th>
                                                 <th class="border-0">Rate</th>
                                                 <th class="border-0">Status</th>
+                                                <th class="border-0" style="width: 40px">Update Status</th>
                                                 <th class="border-0" style="width: 40px">Delete</th>
                                                 <th class="border-0" style="width: 40px">Show</th>
                                             </tr>
@@ -58,10 +60,25 @@
                                                 <tr>
                                                     <td>{{$rs->id}}</td>
                                                     <td>{{$rs->user-> name}}</td>
+                                                    <td ><a style="color: dodgerblue" href="{{route('laravelAdmin.news.show',['id'=>$rs->news->id])}}" >{{$rs->news->title}}</a></td>
                                                     <td>{{$rs->subject}}</td>
                                                     <td>{{$rs->review}}</td>
                                                     <td>{{$rs->rate}}</td>
-                                                    <td>{{$rs->status}}</td>
+                                                    <td>
+                                                        <form role="form" action="{{route('laravelAdmin.comment.update',['id'=>$rs->id])}}" method="post">
+                                                            @csrf
+                                                            <select class="form-control" name="status" id="input-select" >
+                                                                <option selected>{{$rs->status}}</option>
+                                                                <option>True</option>
+                                                                <option>False</option>
+                                                            </select>
+                                                            <td>
+                                                                <button type="submit" class="btn float-right" style="color:#fff;background-color:#2ec551;border-color:#2ec551">Update Status</button>
+                                                            </td>
+                                                        </form>
+
+                                                    </td>
+
                                                     <td>
                                                         <a href="{{route('laravelAdmin.comment.destroy',['id'=>$rs->id])}}" class="btn btn-danger"
                                                            onclick="return confirm('Deleting !! Are you sure?')">

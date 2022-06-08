@@ -10,7 +10,19 @@ use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
-
+    protected $appends = [
+        'getParentsTreenews'
+    ];
+    public static function getParentsTreenews($news,$title)
+    {
+        if($news->parent_id == 0)
+        {
+            return $title;
+        }
+        $parent = News::find($news->parent_id);
+        $title = $parent->title . ' > ' . $title;
+        return NewsController::getParentsTreenews($parent,$title);
+    }
 
     /**
      * Display a listing of the resource.

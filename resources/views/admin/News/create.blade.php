@@ -21,7 +21,8 @@
                             <h2 class="pageheader-title">Add News</h2>
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                                <li class="breadcrumb-item active">Create Page</li>
+                                <li class="breadcrumb-item active"><a href="{{route('laravelAdmin.news.index')}}">News</a></li>
+                                <li class="breadcrumb-item active">News Create Page</li>
                             </ol>
                         </div>
                     </div>
@@ -82,7 +83,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputText3" class="col-form-label">Type</label>
-                                <input type="text" class="form-control" name="type" placeholder="Type">
+                                <select class="form-control" name="type" id="input-select">
+                                    <option>Köşe Yazısı</option>
+                                    <option>Haber</option>
+                                </select>
                             </div>
                             <label>Status</label>
                             <select class="form-control" name="status" id="input-select">

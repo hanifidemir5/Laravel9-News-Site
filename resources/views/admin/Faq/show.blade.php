@@ -18,7 +18,8 @@
                             <h2 class="pageheader-title">FAQ {{$data->id}}</h2>
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index',)}}">Home</a></li>
-                                <li class="breadcrumb-item active">Show FAQ</li>
+                                <li class="breadcrumb-item"><a href="{{route('laravelAdmin.faq.index')}}">FAQ</a></li>
+                                <li class="breadcrumb-item active">FAQ Show Page</li>
                             </ol>
                         </div>
                     </div>

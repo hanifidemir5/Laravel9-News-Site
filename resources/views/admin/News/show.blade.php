@@ -18,7 +18,8 @@
                             <h2 class="pageheader-title">{{$data->title}}</h2>
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                                <li class="breadcrumb-item active">Show News</li>
+                                <li class="breadcrumb-item active"><a href="{{route('laravelAdmin.news.index')}}">News</a></li>
+                                <li class="breadcrumb-item active">Show Page</li>
                             </ol>
                         </div>
                     </div>

@@ -19,7 +19,8 @@
                             <div>
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                                    <li class="breadcrumb-item active">Edit Page</li>
+                                    <li class="breadcrumb-item"><a href="{{route('laravelAdmin.category.index')}}">Categories</a></li>
+                                    <li class="breadcrumb-item active">Category Edit Page</li>
                                 </ol>
                             </div>
                         </div>

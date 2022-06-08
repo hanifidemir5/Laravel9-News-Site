@@ -21,7 +21,8 @@
                             <h2 class="pageheader-title">Add FAQ</h2>
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                                <li class="breadcrumb-item active">Create FAQ Page</li>
+                                <li class="breadcrumb-item"><a href="{{route('laravelAdmin.faq.index')}}">FAQ</a></li>
+                                <li class="breadcrumb-item active">FAQ Create Page</li>
                             </ol>
                         </div>
                     </div>

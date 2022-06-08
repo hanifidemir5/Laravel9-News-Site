@@ -23,6 +23,7 @@
                             <div>
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{{route('laravelAdmin.faq.index')}}">FAQ</a></li>
                                     <li class="breadcrumb-item active">FAQ Edit Page</li>
                                 </ol>
                             </div>

@@ -23,6 +23,7 @@
                             <div>
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
+                                    <li class="breadcrumb-item active"><a href="{{route('laravelAdmin.news.index')}}">News</a></li>
                                     <li class="breadcrumb-item active">Edit Page</li>
                                 </ol>
                             </div>
@@ -69,7 +70,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputText3" class="col-form-label">Type</label>
-                                <input type="text" class="form-control" name="description" value="{{$data->type}}">
+                                <select class="form-control" name="type" id="input-select">
+                                    <option selected>{{$data->type}}</option>
+                                    <option>Köşe Yazısı</option>
+                                    <option>Haber</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="inputText3" class="col-form-label">Detail</label>

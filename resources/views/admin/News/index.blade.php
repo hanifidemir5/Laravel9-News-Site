@@ -21,7 +21,7 @@
                             <div>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                                    <li class="breadcrumb-item active">İndex Page</li>
+                                    <li class="breadcrumb-item active">News Home Page</li>
                                 </ol>
                             </div>
                         </div>
