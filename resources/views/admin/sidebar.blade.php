@@ -29,7 +29,7 @@
                                     <a class="nav-link" href="/laravelAdmin/profile"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{route('laravelAdmin.asetting')}}"><i class="m-r-10 mdi mdi-settings"></i>Settings</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.setting')}}"><i class="m-r-10 mdi mdi-settings"></i>Settings</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('laravelAdmin.faq.index')}}"><i class="fas fa-question-circle"></i>FAQ</a>

@@ -37,7 +37,8 @@ Route::get('/welcome', function () {
  Route::view('/loginuser','home.login');
  Route::view('/registeruser','home.register');
  Route::get('/logoutuser',[BaseController::class,'logout'])->name('logoutuser');
-
+ Route::view('/loginadmin','admin.login');
+ Route::post('/loginadmincheck',[BaseController::class,'loginadmincheck'])->name('loginadmincheck');
 
  Route::get('/index',[BaseController::class,'index'])->name('test');
 
@@ -61,8 +62,8 @@ Route::get('/welcome', function () {
  Route::prefix('laravelAdmin')->name('laravelAdmin.')->group(function(){
     Route::get('/',[AdminBaseController::class,'index'])->name('index');
      // ------------------ Admin General Routes -------------------//
-     Route::get('/asetting',[AdminBaseController::class,'asetting'])->name('asetting');
-     Route::post('/asetting/update',[AdminBaseController::class,'settingUpdate'])->name('asetting.update');
+     Route::get('/setting',[AdminBaseController::class,'asetting'])->name('setting');
+     Route::post('/setting/update',[AdminBaseController::class,'settingUpdate'])->name('setting.update');
 
      // ------------------ Admin Category Routes -------------------//
          Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function() {
@@ -95,6 +96,11 @@ Route::get('/welcome', function () {
              Route::post('/update/{id}', 'update')->name('update');
          });
 
+     Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
+         Route::get('/{pid}', 'index')->name('index');
+         Route::post('/store/{pid}', 'store')->name('store');
+         Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
+     });
      // ------------------ Admin News Image Gallery Routes -------------------//
          Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
              Route::get('/{pid}', 'index')->name('index');
