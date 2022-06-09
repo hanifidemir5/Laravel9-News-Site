@@ -9,10 +9,10 @@
             </div>
             <div class="col-md-6">
                 <div class="tb-menu">
-                    <a href="">About</a>
+                    <a href="{{route('about')}}">About</a>
                     <a href="">Privacy</a>
                     <a href="">Terms</a>
-                    <a href="">Contact</a>
+                    <a href="{{route('contact')}}">Contact</a>
                 </div>
             </div>
         </div>

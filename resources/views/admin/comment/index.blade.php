@@ -47,7 +47,6 @@
                                                 <th class="border-0">Name</th>
                                                 <th class="border-0">News</th>
                                                 <th class="border-0">Subject</th>
-                                                <th class="border-0">Review</th>
                                                 <th class="border-0">Rate</th>
                                                 <th class="border-0">Status</th>
                                                 <th class="border-0" style="width: 40px">Update Status</th>
@@ -62,7 +61,6 @@
                                                     <td>{{$rs->user-> name}}</td>
                                                     <td ><a style="color: dodgerblue" href="{{route('laravelAdmin.news.show',['id'=>$rs->news->id])}}" >{{$rs->news->title}}</a></td>
                                                     <td>{{$rs->subject}}</td>
-                                                    <td>{{$rs->review}}</td>
                                                     <td>{{$rs->rate}}</td>
                                                     <td>
                                                         <form role="form" action="{{route('laravelAdmin.comment.update',['id'=>$rs->id])}}" method="post">

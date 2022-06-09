@@ -31,7 +31,7 @@
                                 <div class="mn-img">
                                     <img src="{{Storage::url($rs->image)}}" height="201" width="133" style="object-fit:cover;">
                                     <div class="mn-title">
-                                        <a href="{{route('newspage',['id'=>$rs->id])}}">{{$rs->title}}</a>
+                                        <a href="{{route('newspage',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a>
                                     </div>
                                 </div>
                             </div>

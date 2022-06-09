@@ -34,14 +34,14 @@ Route::get('/welcome', function () {
  Route::post('/storemessage',[BaseController::class,'storemessage'])->name('storemessage');
  Route::get('/faq',[BaseController::class,'faq'])->name('faq');
  Route::post('/storecomment',[BaseController::class,'storecomment'])->name('storecomment');
-
+ Route::view('/loginuser','home.login');
  Route::get('/index',[BaseController::class,'index'])->name('test');
 
  Route::get('/Parameter/{id}/{Number}',[BaseController::class,'param'])->name('parameter');
 
  Route::post('/save',[BaseController::class,'save'])->name('save');
 
- Route::get('/news/{id}',[BaseController::class,'newspage'])->name('newspage');
+ Route::get('/news/{id}/{slug}',[BaseController::class,'newspage'])->name('newspage');
 
  Route::get('/categorynews/{id}/{slug}',[BaseController::class,'categorynews'])->name('categorynews');
 

@@ -9,7 +9,7 @@
                             <div class="tn-img">
                                 <img src="{{Storage::url($rs->image)}}" height="350" width="550" style="object-fit:cover;">
                                 <div class="tn-title">
-                                    <a href="{{route('newspage',['id'=>$rs->id])}}">{{$rs->title}}</a>
+                                    <a href="{{route('newspage',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a>
                                 </div>
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                             <div class="tn-img">
                                 <img src="{{Storage::url($rs->image)}}" height="175" width="165" style="object-fit:cover;">
                                 <div class="tn-title">
-                                    <a href="{{route('newspage',['id'=>$rs->id])}}">{{$rs->title}}</a>
+                                    <a href="{{route('newspage',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a>
                                 </div>
                             </div>
                         </div>
