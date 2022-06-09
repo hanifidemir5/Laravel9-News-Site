@@ -28,14 +28,27 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-4">
+            <div class="col-lg-3">
+
+            </div>
+            <div class="col-lg-3">
             </div>
             <div class="col-lg-3 col-md-4 align-right">
                 <div class="b-search">
                     <input type="text" placeholder="Search">
                     <button><i class="fa fa-search"></i></button>
+                    @auth
+                        <i class="fa fa-user"></i>
+                        <strong class="text-uppercase">{{Auth::user()->name}} ||</strong>
+                        <i class="fa fa-sign-out-alt"></i><a href="/logoutuser">Logout</a>
+                    @endauth
                 </div>
+                @guest
+                        <strong style="alignment: right" class="text-uppercase">Join us</strong>
+                        <i class="fa fa-arrow-alt-circle-down"></i><a href="/loginuser">Login</a> / <i class="fa fa-arrow-alt-circle-right"></i><a href="/registeruser">Register</a>
+                @endguest
             </div>
         </div>
+
     </div>
 </div>

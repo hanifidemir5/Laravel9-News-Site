@@ -35,6 +35,10 @@ Route::get('/welcome', function () {
  Route::get('/faq',[BaseController::class,'faq'])->name('faq');
  Route::post('/storecomment',[BaseController::class,'storecomment'])->name('storecomment');
  Route::view('/loginuser','home.login');
+ Route::view('/registeruser','home.register');
+ Route::get('/logoutuser',[BaseController::class,'logout'])->name('logoutuser');
+
+
  Route::get('/index',[BaseController::class,'index'])->name('test');
 
  Route::get('/Parameter/{id}/{Number}',[BaseController::class,'param'])->name('parameter');
