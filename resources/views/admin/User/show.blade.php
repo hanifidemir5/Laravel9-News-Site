@@ -1,6 +1,6 @@
 @extends('layouts.AdminWindow')
 x
-@section('title', 'Show Messages: '.$data->title)
+@section('title', 'User Details:')
 
 @section('content')
     <!-- ============================================================== -->
@@ -11,7 +11,7 @@ x
 
 
                 <div class="card">
-                    <h5 class="card-header" style="color: #fff;background-color: #25d5f2;border-color: #25d5f2;">Detail Message Data</h5>
+                    <h5 class="card-header" style="color: #fff;background-color: #25d5f2;border-color: #25d5f2;">User Data</h5>
                     <div class="card-body">
                             <table class="table table-hover">
 
@@ -21,13 +21,8 @@ x
                                 </tr>
 
                                 <tr>
-                                    <th >Name & Surname</th>
+                                    <th >Username</th>
                                     <td >{{$data->name}}</td>
-                                </tr>
-
-                                <tr>
-                                    <th >Phone Number</th>
-                                    <td >{{$data->phone}}</td>
                                 </tr>
 
                                 <tr>
@@ -36,49 +31,39 @@ x
                                 </tr>
 
                                 <tr>
-                                    <th >Subject</th>
-                                    <td >{{$data->subject}}</td>
-                                </tr>
-
-                                <tr>
-                                    <th >Message </th>
-                                    <td >{!! $data->message !!}</td>
-                                </tr>
-
-                                <tr>
-                                    <th >Ip Number</th>
-                                    <td >{{$data->ip}}</td>
-                                </tr>
-
-                                <tr>
-                                    <th >Status</th>
-                                    <td >{{$data->status}}</td>
+                                    <th >Roles</th>
+                                    <td >
+                                        @foreach($data->roles as $role)
+                                            {{$role->name}}<a style="color:red;" href="{{route('laravelAdmin.user.destroyrole',['uid'=>$data->id,'rid'=>$role->id])}}">
+                                                            [x]
+                                                           </a>
+                                        @endforeach
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th >Created Date</th>
                                     <td >{{$data->created_at}}</td>
                                 </tr>
-
+                                <tr>
+                                    <th> Add Role to User</th>
+                                    <td>
+                                        <form role="form" action="{{route('laravelAdmin.user.addrole',['id'=>$data->id])}}" method="post">
+                                            @csrf
+                                            <select name="role_id" style="height: 35px;width: 70px;">
+                                                @foreach($roles as $role)
+                                                   <option value="{{$role->id}}">{{$role->name}}</option>
+                                                @endforeach
+                                            </select>
+                                            <button type="submit" class="btn btn-primary">Add Role</button>
+                                        </form>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <th >Update Date</th>
                                     <td >{{$data->updated_at }}</td>
                                 </tr>
 
-                                <tr>
-                                    <th >Admin Note</th>
-                                    <td>
-                                        <form role="form" action="{{route('laravelAdmin.message.update',['id'=>$data->id])}}" method="post">
-                                            @csrf
-                                            <textarea class="text" cols="100" id="note" name="note">
-                                                    {{$data->note}}
-                                            </textarea>
-                                            <div>
-                                                <button type="submit" class="btn float-right" style="color:#fff;background-color:#2ec551;border-color:#2ec551">Update Note</button>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
 
                             </table>
                     </div>

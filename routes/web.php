@@ -1,5 +1,6 @@
  <?php
 
+ use App\Http\Controllers\Adminpanel\AdminUserController;
  use App\Http\Controllers\AdminPanel\CommentController;
  use App\Http\Controllers\AdminPanel\FaqController;
  use App\Http\Controllers\AdminPanel\MessageController;
@@ -96,11 +97,11 @@ Route::get('/welcome', function () {
              Route::post('/update/{id}', 'update')->name('update');
          });
 
-     Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
-         Route::get('/{pid}', 'index')->name('index');
-         Route::post('/store/{pid}', 'store')->name('store');
-         Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
-     });
+         Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
+             Route::get('/{pid}', 'index')->name('index');
+             Route::post('/store/{pid}', 'store')->name('store');
+             Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
+         });
      // ------------------ Admin News Image Gallery Routes -------------------//
          Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function() {
              Route::get('/{pid}', 'index')->name('index');
@@ -121,5 +122,16 @@ Route::get('/welcome', function () {
              Route::get('/destroy/{id}', 'destroy')->name('destroy');
              Route::get('/show/{id}', 'show')->name('show');
              Route::post('/update/{id}', 'update')->name('update');
+         });
+     // ------------------ Admin User Routes -------------------//
+         Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->group(function() {
+             Route::get('/', 'index')->name('index');
+             Route::get('/edit/{id}', 'edit')->name('edit');
+             Route::get('/destroy/{id}', 'destroy')->name('destroy');
+             Route::get('/show/{id}', 'show')->name('show');
+             Route::post('/update/{id}', 'update')->name('update');
+             Route::post('/addrole/{id}', 'addrole')->name('addrole');
+             Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole');
+
          });
  });
