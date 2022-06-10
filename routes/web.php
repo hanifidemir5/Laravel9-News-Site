@@ -38,7 +38,7 @@ Route::get('/welcome', function () {
  Route::view('/loginuser','home.login');
  Route::view('/registeruser','home.register');
  Route::get('/logoutuser',[BaseController::class,'logout'])->name('logoutuser');
- Route::view('/loginadmin','admin.login');
+ Route::view('/loginadmin','admin.login')->name('loginadmin');
  Route::post('/loginadmincheck',[BaseController::class,'loginadmincheck'])->name('loginadmincheck');
 
  Route::get('/index',[BaseController::class,'index'])->name('test');
@@ -60,7 +60,7 @@ Route::get('/welcome', function () {
 
 
 // ------------------ Admin Panel Routes -------------------//
- Route::prefix('laravelAdmin')->name('laravelAdmin.')->group(function(){
+ Route::middleware('admin')->prefix('laravelAdmin')->name('laravelAdmin.')->group(function(){
     Route::get('/',[AdminBaseController::class,'index'])->name('index');
      // ------------------ Admin General Routes -------------------//
      Route::get('/setting',[AdminBaseController::class,'asetting'])->name('setting');
