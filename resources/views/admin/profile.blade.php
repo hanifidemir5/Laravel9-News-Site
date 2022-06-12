@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Admin Panel Base Index Page </h2>
+                            <h2 class="pageheader-title">Profile </h2>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                     <div>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{route('laravelAdmin.index')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Blank Page</li>
+                            <li class="breadcrumb-item active">Profile Page</li>
                         </ol>
                     </div>
                     <div class="contact">

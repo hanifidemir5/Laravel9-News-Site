@@ -15,20 +15,20 @@
                 <div class="navbar-nav mr-auto">
                     <a href="/" class="navbar-brand">HOME</a>
                         @auth()
-                        <div class="nav-item dropdown on-click">
-                            <span href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >My Account</span>
-                            <div class="dropdown-menu" style="width: 200px">
+                        <div class="nav-item dropdown">
+                            <span href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="show" >My Account</span>
+                            <div class="dropdown-menu " style="width: 200px">
                                 <ul style="list-style-type: none">
-                                    <li><a href="{{'userpanel'}}"><i class="fa fa-user" style="color: black"></i> My Account</a></li>
-                                    <li><a href="#"><i class="fa fa-file-alt" style="color:black;"></i> My Articles</a></li>
+                                    <li><a href="{{route('userpanel.index')}}"><i class="fa fa-user" style="color: black"></i>Profie</a></li>
+                                    <li><a href="{{route('userpanel.mynews')}}"><i class="fa fa-file-alt" style="color:black;"></i> My Articles</a></li>
                                     <li><a href={{route('userpanel.reviews')}}><i class="fa fa-comment" style="color:black;"></i> My Reviews</a></li>
                                     <li><a href="{{route('logoutuser')}}"><i class="fa fa-power-off" style="color:black;"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </div>
                         @endauth
-                    <div class="nav-item dropdown @if (!@isset($page)) show-on-click @endif">
-                        <span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Categories</span>
+                    <div class="nav-item dropdown  ">
+                        <span class="nav-link dropdown-toggle" data-toggle="dropdown" onclick="show" aria-expanded="true">Categories</span>
                         <div class="dropdown-menu">
                             <ul class="category-list">
                                 @foreach($mainCategories as $rs)

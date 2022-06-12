@@ -27,14 +27,16 @@
                     <h2>{{$category->title}}</h2>
                     <div class="row">
                         @foreach($news as $rs)
-                            <div class="col-md-4">
-                                <div class="mn-img">
-                                    <img src="{{Storage::url($rs->image)}}" height="201" width="133" style="object-fit:cover;">
-                                    <div class="mn-title">
-                                        <a href="{{route('newspage',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a>
+                            @if($rs->category_id==$category->id || $rs->category->parent_id == $category->id)
+                                <div class="col-md-4">
+                                    <div class="mn-img">
+                                        <img src="{{Storage::url($rs->image)}}" height="201" width="133" style="object-fit:cover;">
+                                        <div class="mn-title">
+                                            <a href="{{route('newspage',['id'=>$rs->id,'slug'=>$rs->title])}}">{{$rs->title}}</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>
