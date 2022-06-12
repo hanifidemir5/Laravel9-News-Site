@@ -11,7 +11,7 @@
                                     Menu
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/laravelAdmin/user"><i class="m-r-10 mdi mdi-account-switch "></i>Users</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.user.index')}}"><i class="m-r-10 mdi mdi-account-switch "></i>Users</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('laravelAdmin.news.index')}}"><i class="fas fa-newspaper"></i>News</a>
@@ -26,7 +26,7 @@
                                     <a class="nav-link" href="{{route('laravelAdmin.comment.index')}}"><i class="m-r-10 mdi mdi-comment-processing"></i>Comments</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/laravelAdmin/profile"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
+                                    <a class="nav-link" href="{{route('laravelAdmin.profile')}}"><i class="fa fa-fw fa-user-circle"></i>Profile</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('laravelAdmin.setting')}}"><i class="m-r-10 mdi mdi-settings"></i>Settings</a>

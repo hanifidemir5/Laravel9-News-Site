@@ -48,6 +48,11 @@ Route::get('/welcome', function () {
 
  Route::post('/save',[BaseController::class,'save'])->name('save');
 
+ Route::get('/categories',[BaseController::class,'categories'])->name('categories');
+
+ Route::get('/allnews',[BaseController::class,'allnews'])->name('allnews');
+
+
  Route::get('/news/{id}/{slug}',[BaseController::class,'newspage'])->name('newspage');
 
  Route::get('/categorynews/{id}/{slug}',[BaseController::class,'categorynews'])->name('categorynews');
@@ -64,6 +69,11 @@ Route::middleware('auth')->group(function(){
     // ------------------ Admin User Routes -------------------//
      Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function(){
          Route::get('/','index')->name('index');
+         Route::get('/reviews','reviews')->name('reviews');
+         Route::get('/mynews','mynews')->name('mynews');
+         Route::get('/reviewdestroy/{id}', 'reviewdestroy')->name('reviewdestroy');
+         Route::post('/reviewupdate/{id}', 'reviewupdate')->name('reviewupdate');
+
 
      });
 
@@ -73,6 +83,7 @@ Route::middleware('auth')->group(function(){
          // ------------------ Admin General Routes -------------------//
          Route::get('/setting',[AdminBaseController::class,'asetting'])->name('setting');
          Route::post('/setting/update',[AdminBaseController::class,'settingUpdate'])->name('setting.update');
+         Route::get('/profile',[AdminBaseController::class,'profile'])->name('profile');
 
          // ------------------ Admin Category Routes -------------------//
              Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function() {

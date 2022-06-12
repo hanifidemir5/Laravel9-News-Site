@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6 tn-left">
                 <div class="row tn-slider">
-                    @foreach($sliderdata as $rs)
+                    @foreach($mainslider as $rs)
                         <div class="col-md-6">
                             <div class="tn-img">
                                 <img src="{{Storage::url($rs->image)}}" height="350" width="550" style="object-fit:cover;">

@@ -6,14 +6,14 @@
                     <div class="footer-widget">
                         <h3 class="title">Get in Touch</h3>
                         <div class="contact-info">
-                            <p><i class="fa fa-map-marker"></i>123 News Street, NY, USA</p>
-                            <p><i class="fa fa-envelope"></i>info@example.com</p>
-                            <p><i class="fa fa-phone"></i>+123-456-7890</p>
+                            <p><i class="fa fa-map-marker"></i>Bahaddin Gazi KYK,Karabük,Türkiye</p>
+                            <p><i class="fa fa-envelope"></i>teymen_5@hotmail.com</p>
+                            <p><i class="fa fa-phone"></i>+90 541 146 65 25</p>
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
                                 <a href=""><i class="fab fa-facebook-f"></i></a>
                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/mahsatahayyul/"><i class="fab fa-instagram"></i></a>
                                 <a href=""><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
@@ -24,11 +24,9 @@
                     <div class="footer-widget">
                         <h3 class="title">Useful Links</h3>
                         <ul>
-                            <li><a href="#">Lorem ipsum</a></li>
-                            <li><a href="#">Pellentesque</a></li>
-                            <li><a href="#">Aenean vulputate</a></li>
-                            <li><a href="#">Vestibulum sit amet</a></li>
-                            <li><a href="#">Nam dignissim</a></li>
+                            <li><a href="{{route('about')}}">About</a></li>
+                            <li><a href="{{route('references')}}">References</a></li>
+                            <li><a href="{{route('faq')}}">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,27 +35,10 @@
                     <div class="footer-widget">
                         <h3 class="title">Quick Links</h3>
                         <ul>
-                            <li><a href="#">Lorem ipsum</a></li>
-                            <li><a href="#">Pellentesque</a></li>
-                            <li><a href="#">Aenean vulputate</a></li>
-                            <li><a href="#">Vestibulum sit amet</a></li>
-                            <li><a href="#">Nam dignissim</a></li>
+                            <li><a href="{{route('categories')}}">All Categories</a></li>
+                            <li><a href="{{route('allnews')}}">All News</a></li>
+                            <li><a href="{{route('contact')}}">Contact</a></li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h3 class="title">Newsletter</h3>
-                        <div class="newsletter">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed porta dui. Class aptent taciti sociosqu
-                            </p>
-                            <form>
-                                <input class="form-control" type="email" placeholder="Your email here">
-                                <button class="btn">Submit</button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>

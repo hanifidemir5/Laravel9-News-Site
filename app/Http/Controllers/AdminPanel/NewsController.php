@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
@@ -68,7 +69,7 @@ class NewsController extends Controller
         $data->category_id = $request->category_id;
         $data->detail = $request->detail;
         $data->type = $request->type;
-        $data->user_id = 0 ;//$request->user_id;
+        $data->user_id =Auth::id();
         $data->status = $request->status;
         $data->save();
         return redirect('laravelAdmin/news');
@@ -124,7 +125,7 @@ class NewsController extends Controller
         $data->category_id = $request->category_id;
         $data->detail = $request->detail;
         $data->type = $request->type;
-        $data->user_id = 0 ;//$request->user_id;
+        $data->user_id = Auth::id();
         $data->status = $request->status;
         $data->save();
         return redirect('laravelAdmin/news');
