@@ -14,12 +14,25 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
                     <a href="/" class="navbar-brand">HOME</a>
-                    <div class="category-nav @if (!@isset($page)) show-on-click @endif">
+                        @auth()
+                        <div class="nav-item dropdown">
+                            <span href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">My Account</span>
+                            <div class="dropdown-menu" style="width: 200px">
+                                <ul class="custom-menu">
+                                    <li><a href="userpanel"><i class="fa fa-user" style="color: black"></i> My Account</a></li>
+                                    <li><a href="#"><i class="fa fa-paperclip" style="color:black;"></i> My Articles</a></li>
+                                    <li><a href="#"><i class="fa fa-comment" style="color:black;"></i> My Comments</a></li>
+                                    <li><a href="logoutuser"><i class="fa fa-power-off" style="color:black;"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        @endauth
+                    <div class="nav-item dropdown @if (!@isset($page)) show-on-click @endif">
                         <span href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Categories</span>
                         <div class="dropdown-menu">
                             <ul class="category-list">
                                 @foreach($mainCategories as $rs)
-                                    <li class="side-dropdown">
+                                    <li class="dropdown">
                                         <a href="{{route('categorynews',['id'=>$rs->id,'slug'=>$rs->title])}}" class="dropdown-item">{{$rs->title}}</a>
                                         <div class="custom-menu">
                                             <div class="row">

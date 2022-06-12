@@ -5,6 +5,7 @@
  use App\Http\Controllers\AdminPanel\FaqController;
  use App\Http\Controllers\AdminPanel\MessageController;
  use App\Http\Controllers\BaseController;
+ use App\Http\Controllers\UserController;
  use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\AdminPanel\BaseController as AdminBaseController;
  use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
@@ -59,7 +60,14 @@ Route::get('/welcome', function () {
  })->name('dashboard');
 
 Route::middleware('auth')->group(function(){
-// ------------------ Admin Panel Routes -------------------//
+
+    // ------------------ Admin User Routes -------------------//
+     Route::prefix('userpanel')->name('userpanel.')->controller(UserController::class)->group(function(){
+         Route::get('/','index')->name('index');
+
+     });
+
+     // ------------------ Admin Panel Routes -------------------//
      Route::middleware('admin')->prefix('laravelAdmin')->name('laravelAdmin.')->group(function(){
         Route::get('/',[AdminBaseController::class,'index'])->name('index');
          // ------------------ Admin General Routes -------------------//
