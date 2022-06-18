@@ -52,6 +52,8 @@ Route::get('/welcome', function () {
 
  Route::get('/allnews',[BaseController::class,'allnews'])->name('allnews');
 
+ Route::get('/searchnews',[BaseController::class,'searchNews'])->name('searchnews');
+
 
  Route::get('/news/{id}/{slug}',[BaseController::class,'newspage'])->name('newspage');
 
@@ -73,7 +75,12 @@ Route::middleware('auth')->group(function(){
          Route::get('/mynews','mynews')->name('mynews');
          Route::get('/reviewdestroy/{id}', 'reviewdestroy')->name('reviewdestroy');
          Route::post('/reviewupdate/{id}', 'reviewupdate')->name('reviewupdate');
-
+         Route::get('/mynewscreate', 'mynewscreate')->name('mynewscreate');
+         Route::post('/mynewsstore', 'mynewsstore')->name('mynewsstore');
+         Route::get('/mynewsedit/{id}', 'mynewsedit')->name('mynewsedit');
+         Route::get('/mynewsdestroy/{id}', 'mynewsdestroy')->name('mynewsdestroy');
+         Route::get('/mynewsshow/{id}', 'mynewsshow')->name('mynewsshow');
+         Route::post('/mynewsupdate/{id}', 'mynewsupdate')->name('mynewsupdate');
 
      });
 

@@ -125,7 +125,6 @@ class NewsController extends Controller
         $data->category_id = $request->category_id;
         $data->detail = $request->detail;
         $data->type = $request->type;
-        $data->user_id = Auth::id();
         $data->status = $request->status;
         $data->save();
         return redirect('laravelAdmin/news');

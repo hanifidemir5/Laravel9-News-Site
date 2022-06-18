@@ -14,12 +14,13 @@
 @endsection
 
 @section('content')
+
     <div class="breadcrumb-wrap">
         <div class="container">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active"><a href="{{route('userpanel.index')}}">User Panel</a></li>
-                <li class="bre  adcrumb-item active">Comments</li>
+                <li class="bre  adcrumb-item active">/Comments</li>
             </ul>
         </div>
     </div>
@@ -61,7 +62,7 @@
                                             @foreach($comments as $rs)
                                                 <tr>
                                                     <td>{{$rs->id}}</td>
-                                                    <td ><a style="color: dodgerblue" href="{{route('newspage',['id'=>$rs->news->id,'slug'=>$rs->news->title])}}" >{{$rs->news->title}}</a></td>
+                                                    <td ><a style="color: dodgerblue" href="{{route('newspage',['id'=>$rs->news->id,'slug'=>$rs->news->title])}}">{{$rs->news->title}}</a></td>
                                                     <td>{{$rs->subject}}</td>
                                                     <td>{{$rs->rate}}</td>
                                                     <td>
@@ -72,11 +73,10 @@
                                                                 <option>True</option>
                                                                 <option>False</option>
                                                             </select>
-                                                    <td>
-                                                        <button type="submit" class="btn float-right" style="color:#fff;background-color:#2ec551;border-color:#2ec551">Update Status</button>
-                                                    </td>
-                                                    </form>
-
+                                                            <td>
+                                                                <button type="submit" class="btn float-right" style="color:#fff;background-color:#2ec551;border-color:#2ec551">Update Status</button>
+                                                            </td>
+                                                        </form>
                                                     </td>
 
                                                     <td>

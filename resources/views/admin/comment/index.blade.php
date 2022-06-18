@@ -58,8 +58,8 @@
                                             @foreach($data as $rs)
                                                 <tr>
                                                     <td>{{$rs->id}}</td>
-                                                    <td>{{$rs->user-> name}}</td>
-                                                    <td ><a style="color: dodgerblue" href="{{route('laravelAdmin.news.show',['id'=>$rs->news->id])}}" >{{$rs->news->title}}</a></td>
+                                                    <td>{{$rs->user->name}}</td>
+                                                    <td ><a style="color: dodgerblue" href="{{route('laravelAdmin.news.show',['id'=>$rs->news->id,'slug'=>$rs->news->title])}}">{{$rs->news->title}}</a></td>
                                                     <td>{{$rs->subject}}</td>
                                                     <td>{{$rs->rate}}</td>
                                                     <td>

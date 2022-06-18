@@ -35,8 +35,11 @@
             </div>
             <div class="col-lg-3 col-md-4 align-right">
                 <div class="b-search">
-                    <input type="text" placeholder="Search">
-                    <button><i class="fa fa-search"></i></button>
+                    <form action="{{route('searchnews')}}">
+                        @csrf
+                    <input name="search" type="text" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
                     @auth
                         <i class="fa fa-user"></i>
                         <strong class="text-uppercase">{{Auth::user()->name}} ||</strong>
